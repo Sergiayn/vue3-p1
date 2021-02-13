@@ -1,8 +1,9 @@
+import Home from '@/views/shop/ShopList'
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: import('../views/shop/ShopList'),
+    component: Home,
     meta: {
       layout: 'main',
       auth: false
@@ -11,7 +12,7 @@ const routes = [
   {
     path: '/help',
     name: 'Help',
-    component: () => import('../views/Help.vue'),
+    component: () => import('@/views/Help'),
     meta: {
       layout: 'main',
       auth: true
@@ -20,7 +21,7 @@ const routes = [
   {
     path: '/request/:id',
     name: 'Request',
-    component: () => import('../views/Request.vue'),
+    component: () => import('@/views/Request'),
     meta: {
       layout: 'main',
       auth: true
@@ -29,7 +30,7 @@ const routes = [
   {
     path: '/auth',
     name: 'Auth',
-    component: () => import('../views/Auth.vue'),
+    component: () => import('@/views/Auth'),
     meta: {
       layout: 'auth',
       auth: false
@@ -38,7 +39,7 @@ const routes = [
   {
     path: '/shop',
     name: 'shop',
-    component: () => import('../views/shop/ShopList'),
+    component: () => import('@/views/shop/ShopList'),
     meta: {
       layout: 'main',
       auth: false
@@ -47,7 +48,7 @@ const routes = [
   {
     path: '/shop/product/:id',
     name: 'shop-product',
-    component: () => import('../views/shop/ShopProduct'),
+    component: () => import('@/views/shop/ShopProduct'),
     meta: {
       layout: 'main',
       auth: false
@@ -56,11 +57,12 @@ const routes = [
   {
     path: '/cart',
     name: 'cart',
-    component: () => import('../views/shop/ShopCart'),
+    component: () => import('@/views/shop/ShopCart'),
     meta: {
       layout: 'main',
       auth: false
     }
   }
 ]
+
 export default routes
