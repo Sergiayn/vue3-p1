@@ -9,18 +9,18 @@
       <li>
         <router-link :to="{name:'cart'}">Корзина</router-link>
       </li>
-      <li>
-        <router-link to="/">Заявки</router-link>
-      </li>
-      <li>
-        <router-link to="/help">Помощь</router-link>
-      </li>
-      <li>
-        <a href="#" @click.prevent="open">Сообщения</a>
-      </li>
-      <li>
-        <a href="#" @click.prevent="logout">Выход</a>
-      </li>
+<!--      <li>-->
+<!--        <router-link to="/">Заявки</router-link>-->
+<!--      </li>-->
+<!--      <li>-->
+<!--        <router-link to="/help">Помощь</router-link>-->
+<!--      </li>-->
+<!--      <li>-->
+<!--        <a href="#" @click.prevent="open">Сообщения</a>-->
+<!--      </li>-->
+<!--      <li>-->
+<!--        <a href="#" @click.prevent="logout">Выход</a>-->
+<!--      </li>-->
     </ul>
   </nav>
 </template>
