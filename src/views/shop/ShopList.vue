@@ -1,25 +1,35 @@
 <template>
   <div>
     <ShopCategories :categories="categories"/>
+    <ShopProducts :products="products"/>
   </div>
 </template>
 
 <script>
 
 import { useStore } from 'vuex'
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
 import ShopCategories from '@/components/ui/shop/ShopCategories'
+import ShopProducts from '@/components/ui/shop/ShopProducts'
 
 export default {
   name: 'ShopList',
-  components: { ShopCategories },
+  components: { ShopCategories, ShopProducts },
   setup () {
     const store = useStore()
     store.dispatch('shop/loadCategories')
+    store.dispatch('shop/loadProducts')
     const categories = computed(() => store.getters['shop/categories'])
+    const products = computed(() => store.getters['shop/products'])
+    const currentCategoryId = computed(() => store.getters['shop/currentCategoryId'])
+
+    watch(currentCategoryId, () => {
+      store.dispatch('shop/loadProducts')
+    })
 
     return {
-      categories
+      categories,
+      products
     }
   }
 }

@@ -9,7 +9,7 @@
       {{category.title}}
     </router-link>
   </ul>
-  <div class="categories-empty"
+  <div class="block-empty"
     v-else>
     Категорий нет
   </div>
@@ -32,7 +32,7 @@ export default {
   align-content: space-between;
   display: flex;
   flex-wrap: wrap;
-  height: 400px;
+  min-height: 90px;
   justify-content: space-evenly;
 }
 .categories .item {
@@ -47,13 +47,5 @@ export default {
 }
 .categories .item.active, .categories .item:hover {
   border: 4px solid #42b983;
-}
-.categories-empty {
-  background-color: #fff;
-  border-radius: 5px;
-  font-size: 26px;
-  line-height: 32px;
-  padding: 20px;
-  text-align: center;
 }
 </style>

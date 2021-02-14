@@ -21,4 +21,15 @@ router.beforeEach((to, from, next) => {
   }
 })
 
+router.beforeResolve((to, from, next) => {
+  if (to.name === 'shop-category') {
+    const id = to.params?.id
+    store.commit('shop/setCurrentCategoryId', id)
+  } else {
+    store.commit('shop/setCurrentCategoryId', null)
+  }
+
+  next()
+})
+
 export default router
