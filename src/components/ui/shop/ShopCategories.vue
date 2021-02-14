@@ -1,12 +1,14 @@
 <template>
-  <div class="categories"
-       v-if="categories && categories.length">
-    <div class="item"
+  <ul class="categories"
+       v-if="categories && categories.length !== 0">
+    <router-link
+      class="item"
       v-for="category in categories"
-         :key="category">
+      :key="category"
+      :to="{ name: 'shop-category', params: {id:category.id} }">
       {{category.title}}
-    </div>
-  </div>
+    </router-link>
+  </ul>
   <div class="categories-empty"
     v-else>
     Категорий нет

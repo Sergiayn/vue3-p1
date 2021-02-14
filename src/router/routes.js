@@ -46,6 +46,15 @@ const routes = [
     }
   },
   {
+    path: '/shop/category/:id',
+    name: 'shop-category',
+    component: () => import('@/views/shop/ShopList'),
+    meta: {
+      layout: 'main',
+      auth: false
+    }
+  },
+  {
     path: '/shop/product/:id',
     name: 'shop-product',
     component: () => import('@/views/shop/ShopProduct'),
