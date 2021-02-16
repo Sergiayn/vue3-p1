@@ -9,8 +9,8 @@
 
 import { useStore } from 'vuex'
 import { computed, watch } from 'vue'
-import ShopCategories from '@/components/ui/shop/ShopCategories'
-import ShopProducts from '@/components/ui/shop/ShopProducts'
+import ShopCategories from '@/components/shop/ShopCategories'
+import ShopProducts from '@/components/shop/ShopProducts'
 
 export default {
   name: 'ShopList',
